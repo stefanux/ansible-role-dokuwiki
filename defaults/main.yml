@@ -25,3 +25,5 @@ dokuwiki_local:
   - name: "['passcrypt']"
     value: 'bcrypt'
 dokuwiki_title: "default Dokuwiki site"
+dokuwiki_language: en
+dokuwiki_license: cc-by-sa

@@ -41,8 +41,17 @@
         dest: local.php
       - src: plugins.local.php.j2
         dest: plugins.local.php
-      - src: users.auth.php.j2
-        dest: users.auth.php
+    tags:
+      - provision
+
+  - name: Apply and deploy configuration for users
+    template:
+      src: users.auth.php.j2
+      dest: "{{ dokuwiki_base }}/conf/users.auth.php"
+      mode: "0770"
+      group: "{{ dokuwiki_group }}"
+      owner: "{{ dokuwiki_user }}"
+    when: dokuwiki_users is defined
     tags:
       - provision
 
