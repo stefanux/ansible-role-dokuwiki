@@ -10,7 +10,9 @@ $conf['lang'] = '{{ dokuwiki_language }}';
 $conf['license'] = '{{ dokuwiki_license}}';
 $conf['useacl'] = 1;
 $conf['superuser'] = '@admin';
+{% if dokuwiki_disableactions is defined %}
 $conf['disableactions'] = '{{ dokuwiki_disableactions }}';
+{% endif %}
 {% if dokuwiki_local is defined %}
 {%   for conf in dokuwiki_local %}
 $conf{{ conf.name }} = {{ conf.value }};

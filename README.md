@@ -133,7 +133,7 @@ only logged on users are allowed access (0).
 users have upload, create, edit, and read permissions (8).
 
 
-**dokuwiki_disableactions**: Which actions to disable. By default, registering
+**dokuwiki_disableactions**: Which actions to disable. By default, nothing
 is disabled.
 
 

@@ -20,7 +20,6 @@ dokuwiki_user: root
 # Template parameters (will only be used when dokuwiki_provision is true)
 dokuwiki_acl_all: 0
 dokuwiki_acl_user: 8
-dokuwiki_disableactions: "register"
 dokuwiki_local:
   - name: "['passcrypt']"
     value: 'bcrypt'
