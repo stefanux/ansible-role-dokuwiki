@@ -15,11 +15,11 @@ $conf['disableactions'] = '{{ dokuwiki_disableactions }}';
 {% endif %}
 {% if dokuwiki_local is defined %}
 {%   for conf in dokuwiki_local %}
-$conf{{ conf.name }} = {{ conf.value }};
+$conf{{ conf.name }} = '{{ conf.value }}';
 {%   endfor %}
 {% endif %}
 {% if dokuwiki_template is defined and dokuwiki_template_local is defined %}
 {%   for conf in dokuwiki_template_local %}
-$conf['tpl']['{{ dokuwiki_template }}']{{ conf.name }} = {{ conf.value }};
+$conf['tpl']['{{ dokuwiki_template }}']{{ conf.name }} = '{{ conf.value }}';
 {%   endfor %}
 {% endif %}
