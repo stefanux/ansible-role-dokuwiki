@@ -236,4 +236,4 @@ Author Information
 Created by Peter Mosmans. Suggestions, feedback and pull requests are always
 welcome.
 
-Contributions by @onny
+Contributions by @onny @n0emis @stefanux
