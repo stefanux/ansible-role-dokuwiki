@@ -21,8 +21,11 @@ dokuwiki_user: root
 dokuwiki_acl_all: 0
 dokuwiki_acl_user: 8
 dokuwiki_local:
+  - name: "['gzip_output']"
+    value: '1'
   - name: "['passcrypt']"
     value: 'bcrypt'
+
 dokuwiki_title: "default Dokuwiki site"
 dokuwiki_language: en
 dokuwiki_license: cc-by-sa
