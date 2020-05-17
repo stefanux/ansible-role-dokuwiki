@@ -36,3 +36,7 @@ dokuwiki_rewrite_htaccess_xmlrpc_https_only: True
 dokuwiki_title: "default Dokuwiki site"
 dokuwiki_language: en
 dokuwiki_license: cc-by-sa
+
+# create symlink from root to ./data/cache/sitemap.xml.gz when wiki is the whole page and ['sitemap'] '1':
+dokuwiki_symlink_sitemap: False
+

@@ -74,6 +74,17 @@
       - provision
   when: dokuwiki_provision
 
+- name: Symlink Sitemap to htdocs-root
+  file:
+    src: "./data/cache/sitemap.xml.gz"
+    dest: "{{ dokuwiki_base }}/sitemap.xml.gz"
+    state: link
+  tags:
+    - provision
+  when:
+  - dokuwiki_provision
+  - dokuwiki_symlink_sitemap
+
 - name: Create .htaccess for rewrite
   template:
     src: "htaccess.j2"
