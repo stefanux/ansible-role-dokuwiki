@@ -58,7 +58,7 @@
   - name: Install cron job
     template:
       src: cleanup.sh.j2
-      dest: "/etc/cron.daily/cleanup-{{ dokuwiki_name }}"
+      dest: "/etc/cron.daily/dokuwiki-cleanup-{{ dokuwiki_name }}"
       mode: "0755"
       group: root
       owner: root
