@@ -74,6 +74,19 @@
       - provision
   when: dokuwiki_provision
 
+- name: Create .htaccess for rewrite
+  template:
+    src: "htaccess.j2"
+    dest: "{{ dokuwiki_base }}/.htaccess"
+    mode: "0660"
+    group: "{{ dokuwiki_group }}"
+    owner: "{{ dokuwiki_user }}"
+  tags:
+    - provision
+  when:
+  - dokuwiki_provision
+  - dokuwiki_rewrite_htaccess
+
 - name: Remove (previous versions of) plugins
   file:
     path: "{{ dokuwiki_base }}/lib/plugins/{{ item.name }}"
